@@ -7,6 +7,7 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,8 +29,12 @@ public class Alumno {
        una materia determinada (implementar de manera tal que no deje inscribir un alumno en dos
        materias iguales.)
     */
-    public boolean agregarMateria(Materia materia){
-        return materias.add(materia);
+    public void agregarMateria(Materia materia){
+        if(materias.add(materia)){
+            JOptionPane.showMessageDialog(null, "Inscripcion realizada con éxito.");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se puede crear inscripcion. El alumno ya estaba inscripto en esta materia");
+        }
     }
     
     /*

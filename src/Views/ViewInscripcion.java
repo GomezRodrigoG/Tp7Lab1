@@ -182,11 +182,7 @@ public class ViewInscripcion extends javax.swing.JInternalFrame {
             }
         }
         
-        if(alumno.agregarMateria(materia)){
-            JOptionPane.showMessageDialog(this, "Inscripcion realizada con éxito.");
-        } else {
-            JOptionPane.showMessageDialog(this, "No se puede crear inscripcion. El alumno ya estaba inscripto en esta materia");
-        }
+        alumno.agregarMateria(materia);
     }//GEN-LAST:event_jbInscribirActionPerformed
 
 
